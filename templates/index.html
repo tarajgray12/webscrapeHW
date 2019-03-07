@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mission to Mars</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      </head>
+
+      <body>
+        <div class="container">
+      
+          <div class="jumbotron text-center">
+            
+            <!-- Add Welcome message with link to Data Scrape -->
+            <h1>Mission to Mars!</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+          </div>
+
+          <div class="row" id="mars-data">
+            <div class="col-md-12">
+              <h3 class="heading"><strong>Latest Mars News</strong> </h3>
+              <div class="row">{{news.title}}</div>
+                  <p>{{news.paragraph}}</p>
+                  <img src= {{image.featured_image}} height="500" width="1000">
+                  <br>
+                  <br>
+            <div class="row">{{weather.weather}} >
+            <br>
+            <br>
+            <h3 class="heading">{{info.table|safe}}</h3>
+            <br>
+               <h3>{{hemis[0]['title']}}</h3>
+                <img src= {{hemis[0]['img_url']}} height="200" width="200">
+                <h3>{{hemis[1]['title']}}</h3>
+                <img src= {{hemis[1]['img_url']}} height="200" width="200">
+                <h3>{{hemis[2]['title']}}</h3>
+                <img src= {{hemis[2]['img_url']}} height="200" width="200">
+                <h3>{{hemis[3]['title']}}</h3>
+                <img src= {{hemis[3]['img_url']}} height="200" width="200">
+        <br>
+        <br>
+        <br>
+        
+      </body>
+
+
+</html>
